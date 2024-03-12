@@ -26,11 +26,20 @@ data "google_iam_policy" "admin" {
   }
 
   binding {
-    role = google_project_iam_custom_role.student.id
+    role = "roles/editor"
 
     members = [
-      "user:wangeric639@gmail.com",
+      "user:wangeric639@gmail.com"
     ]
   }
+
+
+  # binding {
+  #   role = google_project_iam_custom_role.student.id
+
+  #   members = [
+  #     "user:wangeric639@gmail.com",
+  #   ]
+  # }
 }
 
